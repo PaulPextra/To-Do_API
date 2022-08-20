@@ -30,7 +30,7 @@ const getTodoById = (req, res) => {
         if (todoNotFound) {
             res.status(404).send(`Todo with ID:${id} does not exist in the database.`);
         }
-        res.status(200).json(results.rows)
+        res.status(200).json(results.rows[0])
     });
 };
 
